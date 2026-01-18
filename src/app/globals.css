@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* Custom 4chan-style overrides */
+body {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.greentext {
+  color: #789922;
+}
+
+.quote-link {
+  color: #0000ee;
+  text-decoration: none;
+}
+
+.quote-link:hover {
+  text-decoration: underline;
+}
+
+.post-content {
+  line-height: 1.4;
+}
+
+.post-content br {
+  line-height: 1.4;
+}
+
+/* Image hover effects */
+.thumbnail:hover {
+  opacity: 0.8;
+}
+
+/* Form styling to match 4chan */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  font-family: monospace;
+  font-size: 11px;
+}
+
+/* Board listing styling */
+.board-grid a {
+  transition: all 0.2s ease;
+}
+
+.board-grid a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* globals.css */
+.custom-gradient {
+  background-image: linear-gradient(
+    to bottom,
+    #000000 0%,    /* Pure Black */
+    #000 15%,   /* Very dark gray */
+    #000 50%,   /* Mid charcoal */
+    #000 100%   /* Lighter gray footer area */
+  );
+  background-attachment: fixed;
+}
+
+.custom-gradient2 {
+  background-image: linear-gradient(
+    to bottom,
+    #000%,
+    #000 20%
+  );
+}
+
+.post-content .greentext-line {
+  line-height: 0.8 !important;
+  display: block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
